@@ -1,23 +1,34 @@
 *{
     font-family: 'Raleway', sans-serif;
 }
+html, body{
+    height: 100%;
+    margin: 0;
+}
 
 body {
     background-image: linear-gradient(to right, #052137, #053b54, #015771, #00758c, #0f94a4);
 }
 
+.container{
+    /* margin: 0; */  
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 div{
-    position: relative;
-    top: 75px;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
+    width: 400px;
+    height: 400px;
     text-align: center;
     color: aliceblue;
+
 }
 
 .pic{
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     border-radius: 50%;
 }
