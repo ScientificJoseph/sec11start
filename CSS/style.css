@@ -20,15 +20,15 @@ body {
 }
 
 div{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     text-align: center;
     color: aliceblue;
 
 }
 
 .pic{
-    width: 90%;
-    height: 90%;
+    width: 75%;
+    height: 75%;
     border-radius: 50%;
 }
