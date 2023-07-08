@@ -19,7 +19,7 @@ function Person () {
     }
 }
 
-Person.prototype = {
+Person.prototype = { // this is the way a child object extends it's parent
     printAge() {
         console.log(this.age)
     }
