@@ -19,5 +19,5 @@ function Person () {
     }
 }
 
-const person = new Person()
+const person = new Person() 
 person.greet()
