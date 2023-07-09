@@ -35,3 +35,17 @@ h1{
     height: 75%;
     border-radius: 50%;
 }
+#btn{
+    font-size: 1.2rem;
+    padding: 4px 12px;
+    background-color: aliceblue;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+#btn:hover{
+    cursor: pointer;
+    color:white;
+    background-image: linear-gradient(to right, #052137, #053b54, #015771, #00758c, #0f94a4);
+
+}
