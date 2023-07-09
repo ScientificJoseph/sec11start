@@ -76,7 +76,7 @@ const course = { // could use new Object()
 Object.setPrototypeOf(course,{
     // ...Object.getPrototypeOf(course),
     printRating() {
-        console.log(`Wonderfull ${this.name}, that course has a rating of ${this.rating}/5!`)
+        console.log(`Wonderfull ${this.name}, that course has a rating of ${this.rating}/5 stars!`)
     }
 })
 
