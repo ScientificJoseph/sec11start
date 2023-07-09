@@ -58,9 +58,49 @@ class AgedPerson {
 // const person2 = new person.__proto__.constructor()
 // console.dir(Object.prototype.__proto__)
 
-const person = new Person();
-const person2 = new Person();
-person.greet()
-console.log(person.__proto__ == person2.__proto__)
-const btn = document.getElementById('btn')
-btn.addEventListener('click', person.greet.bind(person))
+// const person = new Person();
+// const person2 = new Person();
+// person.greet()
+// console.log(person.__proto__ == person2.__proto__)
+
+// const btn = document.getElementById('btn')
+// btn.addEventListener('click', person.greet.bind(person))
+
+const course = { // could use new Object()
+    title: 'Argicultue - Improved Methods',
+    name: 'Simon',
+    rating: 5
+};
+
+// console.log(Object.getPrototypeOf(course))
+Object.setPrototypeOf(course,{
+    // ...Object.getPrototypeOf(course),
+    printRating() {
+        console.log(`Wonderfull ${this.name}, that course has a rating of ${this.rating}/5!`)
+    }
+})
+
+const student = Object.create({printProgress: function(){
+    console.log(`${this.name}, we are ${this.progress * 100}% there.`)
+}
+}, {
+    name: {
+        configurable: true,
+        enumerable: true,
+        value: 'Bertha',
+        writable: true
+    }
+}) // {}
+
+// student.name = 'Bertha'
+
+Object.defineProperty(student, 'progress', {
+    configurable: true,
+    enumerable: true,
+    value: 0.8,
+    writable: false
+})
+
+console.log(student)
+student.printProgress()
+course.printRating();
