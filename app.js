@@ -69,7 +69,10 @@ class AgedPerson {
 const course = { // could use new Object()
     title: 'Argicultue - Improved Methods',
     name: 'Simon',
-    rating: 5
+    rating: 5,
+    answer(){
+        console.log(`${this.title} is the way forward.`)
+    }
 };
 
 // console.log(Object.getPrototypeOf(course))
@@ -100,6 +103,9 @@ Object.defineProperty(student, 'progress', {
     value: 0.8,
     writable: false
 })
+
+const btn = document.getElementById('btn')
+btn.addEventListener('click', course.answer.bind(course))
 
 console.log(student)
 student.printProgress()
